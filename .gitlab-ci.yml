@@ -1,0 +1,44 @@
+
+stages:
+  - build
+  - deploy
+
+build:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: build
+  
+  variables:
+    IMAGE_URI: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+    BUILD_COMMAND: "build-dev"
+  
+  rules:
+    # Override IMAGE_URI defined to be on main as commit short SHA
+    - if: $CI_COMMIT_REF_NAME =~ /main/
+      variables:
+        # IMAGE_URI: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+        BUILD_COMMAND: build-prod
+    # Change build command if the branch is staging
+    - if: $CI_COMMIT_REF_NAME =~ /staging/
+      variables:
+        BUILD_COMMAND: "build-stg"
+    - when: always
+
+  before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+  script:
+    - docker build --pull --build-arg BUILD_COMMAND=$BUILD_COMMAND -t $IMAGE_URI .
+    - docker push $IMAGE_URI
+
+deploy:
+    stage: deploy
+    variables:
+      WEBSITE_MAIN_IMAGE_TAG: $CI_COMMIT_REF_NAME
+      DELIVERY_PROJECT: majarra/technical/manhom/content-delivery-service
+    # Trigger cross project pipeline, trigger delivery service pipeline in order to rebuild the image and deploy the service.
+    # Use same branches naming convention.
+    trigger: 
+        project: $DELIVERY_PROJECT
+        branch: $CI_COMMIT_REF_NAME
+
