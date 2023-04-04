@@ -33,8 +33,8 @@
                         <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <img class="logo-footer m-3" src="/web-asset/img/logo.png" alt="logo ManHOM">
                         <div class="m-3">
-                        <p class="text-gray-90  text-md-end footer-info w-75   lh-lg fs-6">   <span>"من هم؟"</span> هو أول قاعدة بيانات لمعلومات
-                        الأشخاص والمؤسسات العربية. أحد مواقع مجرة</p>
+                        <p class="text-gray-90  text-md-end footer-info w-75   lh-lg fs-6">   <span>مطبخي</span> جديد عالم المطابخ
+                        أحدث التجهزات من الماركات العالمية</p>
                         <b class="fs-6">تابعنا على</b>
                         <span class="me-3 text-md-start">
                         <a aria-label="Manhom linkedin" target=”_blank” href="https://www.linkedin.com/company/manhom/"     class="text-gray-90"> 
@@ -60,7 +60,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                         <ul class="nav flex-column p-0">
                         <li class="nav-item">
-                            <h2 class="fw-bold fs-16">حول من هم</h2>
+                            <h2 class="fw-bold fs-16">حول  مطبخي</h2>
                         </li>
                         <li  class="nav-item  py-2" v-for="(tap,index) in taps0" :key=index>
                         <a  class="text-gray-90 py-1 fs-6 fw-bold text-decoration-none" :href=tap.element >{{tap.title}}</a>
@@ -70,7 +70,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                         <ul class="nav flex-column p-0">
                         <li class="nav-item">
-                            <h2 class="fw-bold fs-16" > مواقع أخرى من مجرة</h2>
+                            <h2 class="fw-bold fs-16" >من نحن</h2>
                         </li>
                         <li  class="nav-item  py-2" v-for="(tap,index) in taps1" :key=index>
                         <a :target="tap.element.includes('http') ? '_blank' : ''" class="text-gray-90 fs-6 fw-bold text-decoration-none" :href=tap.element >{{tap.title}}</a>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="container-fluid fix">
                     <h2 class="fs-6">
-                    <div class="text-muted">جميع الحقوق محفوظة ©2012-{{ new Date().getFullYear() }} لمؤسسة مجرة.</div>
+                    <div class="text-muted">جميع الحقوق محفوظة ©2012-{{ new Date().getFullYear() }}.</div>
                     </h2>
                     </div>
                     </div>

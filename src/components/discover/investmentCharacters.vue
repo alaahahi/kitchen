@@ -56,7 +56,7 @@ export default {
       charactours:{},
       filter:{
       "order":["most_searched"],
-      "country":[this.$store.state.countryFilter.toLowerCase()]
+      "country":[this.$store.state.langFilter.toLowerCase()]
       }
         }
     },

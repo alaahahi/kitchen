@@ -128,7 +128,7 @@ export default {
 
 <style>
 .activeBtn {
-    background-color: #4169E3 !important;
+    background-color: #4B91F1 !important;
 }
 
 .carousel-indicators [data-bs-target] {

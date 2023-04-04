@@ -1,20 +1,15 @@
 <template>
     <section class="trend-search mb-5 mt-2" style="direction: ltr;">
-        <div class=" text-center">
-            <h1 class="py-4 fw-bold" v-resize-text="{ ratio: 1.5, minFontSize: '12px', maxFontSize: '40px' }">الشخصيات
-                الأكثر زيارة الآن</h1>
-            <!--<h1 class="display-4 fs-4 py-4 text-black-80 ">الشخصيات الأكثر زيارة ً ...  الأكثر تفاعلاً  .... الأكثر تأثيرا  ً </h1>-->
-        </div>
-        <div :class="!characters ? 'd-none' : 'd-block'">
-            <div v-if="checkRelLength(characters)">
-                <hooperCharactoure id="charactoursSlider" :charactours=characters :hooperSettings=hooperSettings />
+        <div :class="!sliderImages ? 'd-none' : 'd-block'">
+            <div v-if="checkRelLength(sliderImages)">
+                <hooperSliderHome id="charactoursSlider" :charactours=sliderImages :hooperSettings=hooperSettings />
             </div>
         </div>
-        <div :class="!characters ? 'd-block' : 'd-none'">
+        <div :class="!sliderImages ? 'd-block' : 'd-none'">
             <hooper :settings="hooperSettings">
-                <slide v-for="(charactour, index) in 10" :key=index>
+                <slide v-for="(charactour, index) in 3" :key=index>
                     <div class="m-3">
-                        <VueSkeletonLoader type="rect" width="95%" height="300px" color="#F6F6F6" animation="wave"
+                        <VueSkeletonLoader type="rect" width="100%" height="500px" color="#F6F6F6" animation="wave"
                             :rounded=true radius=15 class="m-2" />
                     </div>
                 </slide>
@@ -22,28 +17,22 @@
                 <hooper-navigation slot="hooper-addons"></hooper-navigation>
             </hooper>
         </div>
-        <div class="row py-4" >
-            <div class=" w-100 text-center pb-5  mt-4">
-                <router-link class="btn  btn-primary mt-3 mb-4 btn-size fw-bold" :to="{ name: 'allCharacterPage' }" >
-                    عرض الكل
-                </router-link>
-            </div>
-        </div>
+
     </section>
 </template>
 <script>
 import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper';
 import 'hooper/dist/hooper.css';
 import VueSkeletonLoader from 'skeleton-loader-vue';
-import hooperCharactoure from '../pages/accessories/hooperCharactoure.vue'
+import hooperSliderHome from '../pages/accessories/hooperSliderHome.vue'
 export default {
-    props:['characters'],
+    props:['sliderImages'],
     components:
     {
         Hooper,
         Slide,
         HooperNavigation,
-        hooperCharactoure,
+        hooperSliderHome,
         VueSkeletonLoader
     },
     data() {
@@ -60,16 +49,16 @@ export default {
                 "rtl": true, 
                 "itemsToShow": 1.5, 
                 "breakpoints": { 
-                    "476": { "itemsToShow": 1.5 },
-                    "576": { "itemsToShow": 2.5 }, 
-                    "852": { "itemsToShow": 3.5 }, 
-                    "1200": { "itemsToShow": 4.5 },
-                    "1400": { "itemsToShow": 5.5 },
-                    "1600": { "itemsToShow": 6.5 },
+                    "476": { "itemsToShow": 1 },
+                    "576": { "itemsToShow": 1 }, 
+                    "852": { "itemsToShow": 1 }, 
+                    "1200": { "itemsToShow": 1 },
+                    "1400": { "itemsToShow":1 },
+                    "1600": { "itemsToShow": 1 },
 
                  } },
             charactours: {},
-            code:this.$route.meta.code ?this.$route.meta.code: (this.$store.getters.countryFilter ? this.$store.getters.countryFilter.toLowerCase() : 'ae'),
+            code:this.$route.meta.code ?this.$route.meta.code: (this.$store.getters.langFilter ? this.$store.getters.langFilter.toLowerCase() : 'ae'),
            
         }
     },
@@ -87,11 +76,11 @@ export default {
             }
         },
         async getCharactour() {
-            if(this.code){
+            if(false){
 
             await this.http.get('/charactour/most_visited?code=' +this.code)
                 .then(async (response) => {
-                    this.charactours = response.data.top_characters
+                    this.charactours = response.data.top_sliderImages
 
                     this.loading = false
                 })

@@ -195,7 +195,7 @@ export default {
         this.http.post('/charactour/filter',
          {
          administrativeUpdate:"1",
-         "code":this.$store.state.countryFilter.toLowerCase() ? this.$store.state.countryFilter.toLowerCase() :'ae'
+         "code":this.$store.state.langFilter.toLowerCase() ? this.$store.state.langFilter.toLowerCase() :'ar'
          }
         )
         .then(async (response)=>
@@ -284,7 +284,7 @@ export default {
     height: 40px;
 }
 .activeBtn{
- background-color: #4169E3  !important;
+ background-color: #4B91F1  !important;
 }
 .carousel-indicators [data-bs-target] {
 opacity: 1 !important;

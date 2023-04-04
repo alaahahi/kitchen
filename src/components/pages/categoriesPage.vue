@@ -133,7 +133,7 @@ export default {
     getCategorySelected() {
       this.loadingMoreSelected = true
       this.http
-        .get('/category/getCategoriesByCountry?code=' + this.$store.state.countryFilter.toLowerCase())
+        .get('/category/getCategoriesByCountry?code=' + this.$store.state.langFilter.toLowerCase())
         .then(async (response) => {
           this.allcategorySelected = response.data.categories
           this.categorysSelected = this.allcategorySelected.slice(0, this.more)
@@ -252,7 +252,7 @@ input::placeholder {
   background: none;
 }
 .allresult {
-  color: #4169e3;
+  color: #4B91F1;
   font-size: 16px;
   font-weight: 700;
 }
@@ -261,7 +261,7 @@ hr {
 }
 
 .fix-primary {
-  background: #4169E3 !important ;
+  background: #4B91F1 !important ;
 
   color: #fff !important;
 }

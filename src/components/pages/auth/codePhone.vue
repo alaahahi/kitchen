@@ -6,7 +6,7 @@
           <div class="row flex-row-reverse mt-3 mb-5">
             <div class="col-md-8 text-end ">
               <router-link class="navbar-brand" to="/">
-                <img class="logo-manhom"  src="/web-asset/img/logo.png" alt="logo ManHOM">
+                <img class="logo-katchen"  src="/web-asset/img/logo.png" alt="logo ManHOM">
               </router-link>
             </div>
           </div>

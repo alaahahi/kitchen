@@ -2,11 +2,7 @@
 import VueLodash from 'vue-lodash'
 import lodash from 'lodash'
 Vue.use(VueLodash, {lodash: lodash })
-import "bootstrap" 
-import 'bootstrap/dist/css/bootstrap.min.css'
 import "./sass/app.scss"
-import * as bootstrap from 'bootstrap'
-window.bootstrap = bootstrap;
 import axios from 'axios';
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
@@ -16,6 +12,20 @@ Vue.use(VueMeta, {
   })
   import Vuelidate from 'vuelidate'
 Vue.use(Vuelidate)
+import VueI18n from 'vue-i18n'
+import en from './i18n/en.js';
+import ar from './i18n/ar.js';
+Vue.use(VueI18n)
+const i18n = new VueI18n({
+  locale:  Vue.$cookies.get("selectedlang")  ? Vue.$cookies.get("selectedlang") : 'en', // set the default locale to English
+  messages: {
+    en, // register the English language module
+    ar // register the Arabic language module
+  }
+});
+
+
+
 import VueResizeText from 'vue-resize-text';
   Vue.use(VueResizeText)
   import Toast from "vue-toastification"
@@ -107,6 +117,7 @@ import Vue from 'vue'
 
 const app = new Vue({
     el: '#app',
+    i18n,
     router,
     store,
     components: {

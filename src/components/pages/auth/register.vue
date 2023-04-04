@@ -188,7 +188,7 @@
                   </div>
                   <div class="d-flex justify-content-center align-items-center mt-2" v-if="loading">
                     <span>جاري تحميل الصورة</span>
-                    <span class="spinner-border spinner-border-sm me-2" style="color: #4169e3"></span>
+                    <span class="spinner-border spinner-border-sm me-2" style="color: #4B91F1"></span>
                   </div>
                 </div>
                 <div class="row">

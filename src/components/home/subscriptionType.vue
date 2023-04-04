@@ -124,7 +124,7 @@
                             جاري التحويل إلى صفحة الدفع
                         </h2>
                         <h4 class="text-center fw-bold pb-4">الرجاء الإنتظار</h4>
-                        <span class="spinner-border m-auto d-block mb-4" style="color:#4169E3"></span>
+                        <span class="spinner-border m-auto d-block mb-4" style="color:#4B91F1"></span>
                     </div>
 
                 </div>
@@ -145,7 +145,7 @@
                            الجلسة غير صالحة سيتم تحويلك الى صفحة تسجيل الدخول
                         </h2>
                         <h4 class="text-center fw-bold pb-4">الرجاء الإنتظار</h4>
-                        <span class="spinner-border m-auto d-block mb-4" style="color:#4169E3"></span>
+                        <span class="spinner-border m-auto d-block mb-4" style="color:#4B91F1"></span>
                     </div>
 
                 </div>

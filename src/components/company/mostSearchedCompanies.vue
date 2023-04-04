@@ -72,7 +72,7 @@ export default {
             {
         this.http.post('/company/filter',{
           "order":["most_searched"],
-          "country":[this.$store.state.countryFilter.toLowerCase()]
+          "country":[this.$store.state.langFilter.toLowerCase()]
         })
         .then(async (response)=>{
         this.bestCompanyLastMonth = response.data.items

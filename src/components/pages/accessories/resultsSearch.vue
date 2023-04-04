@@ -183,7 +183,7 @@
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M7.24843 0.351472C7.71706 0.820101 7.71706 1.5799 7.24843 2.04853L3.29696 6L7.24843 9.95147C7.71706 10.4201 7.71706 11.1799 7.24843 11.6485C6.7798 12.1172 6.02 12.1172 5.55137 11.6485L0.751374 6.84853C0.282745 6.3799 0.282745 5.6201 0.751374 5.15147L5.55137 0.351472C6.02 -0.117157 6.7798 -0.117157 7.24843 0.351472Z"
-                      fill="#4169E3"
+                      fill="#4B91F1"
                     />
                   </svg>
                 </a>
@@ -202,9 +202,9 @@
                   style="background-color: #fff; box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 10%)"
                 >
                   <div class="m-auto pb-2">
-                    <img class="logo-manhom px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
+                    <img class="logo-katchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
                     <img class="px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
-                    <img class="logo-manhom px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
+                    <img class="logo-katchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
                   </div>
                   <h2 class="fw-bold">نأسف لعدم العثور على طلبك</h2>
                   <h5 class="text-black-80 py-2">
@@ -326,7 +326,7 @@ export default {
     
     getResultsSerach(type = '') {
       this.http.get('/advance_search_v2?q=' + this.text + '&type=' + type+'&code='+
-           (this.$store.getters.countryFilter ? this.$store.getters.countryFilter : 'ae')).then(async (response) => {
+           (this.$store.getters.langFilter ? this.$store.getters.langFilter : 'ae')).then(async (response) => {
         this.resultsCompanySerach = response.data.result
           ? response.data.result.filter((item) => {
               return item.type == 'company'
@@ -355,7 +355,7 @@ export default {
     getResultsSerachMix() {
       if(this.text){
       this.http.get('/advance_search_mix_v2?q='+this.text+'&code='+
-           (this.$store.getters.countryFilter ? this.$store.getters.countryFilter : 'ae')).then(async (response) => {
+           (this.$store.getters.langFilter ? this.$store.getters.langFilter : 'ae')).then(async (response) => {
             this.resultsCharactourSerach =  response.data.characters
         this.resultsCompanySerach = response.data.companies
 
@@ -472,7 +472,7 @@ input::placeholder {
   background: none;
 }
 .allresult {
-  color: #4169e3;
+  color: #4B91F1;
   font-size: 16px;
   font-weight: 700;
 }

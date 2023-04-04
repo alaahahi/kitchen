@@ -285,7 +285,7 @@ input::placeholder {
   background: none;
 }
 .allresult {
-  color: #4169e3;
+  color: #4B91F1;
   font-size: 16px;
   font-weight: 700;
 }
@@ -294,7 +294,7 @@ hr {
 }
 
 .fix-primary {
-  background: #4169E3 !important ;
+  background: #4B91F1 !important ;
 
   color: #fff !important;
 }

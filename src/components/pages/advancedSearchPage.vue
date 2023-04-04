@@ -1856,8 +1856,8 @@ export default {
       order: [],
       code: this.$route.meta.code
         ? this.$route.meta.code
-        : this.$store.getters.countryFilter
-        ? this.$store.getters.countryFilter.toLowerCase()
+        : this.$store.getters.langFilter
+        ? this.$store.getters.langFilter.toLowerCase()
         : 'ae',
       resultsCategory: [],
       skip: 0,
@@ -2098,7 +2098,7 @@ export default {
         this.max = true
       }
       // '$code=' +
-      // (this.$store.getters.countryFilter ? this.$store.getters.countryFilter : 'ae')+
+      // (this.$store.getters.langFilter ? this.$store.getters.langFilter : 'ae')+
       this.http
         .get(
           '/advance_search_v2?q=' +
@@ -2425,7 +2425,7 @@ export default {
         this.prevResults = 0
       }
       // '&code=' +
-      // (this.$store.getters.countryFilter ? this.$store.getters.countryFilter : 'ae')+
+      // (this.$store.getters.langFilter ? this.$store.getters.langFilter : 'ae')+
       this.http
         .get(
           '/most_searched_filtered?skip=' +
@@ -2802,7 +2802,7 @@ input::placeholder {
 }
 
 .allresult {
-  color: #4169e3;
+  color: #4B91F1;
   font-size: 16px;
   font-weight: 700;
 }

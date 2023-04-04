@@ -78,8 +78,8 @@ export default {
     return {
       code: this.$route.meta.code
         ? this.$route.meta.code
-        : this.$store.state.countryFilter
-        ? this.$store.state.countryFilter.toLowerCase()
+        : this.$store.state.langFilter
+        ? this.$store.state.langFilter.toLowerCase()
         : 'ae',
       loading: true,
       disabled: true,
@@ -100,7 +100,7 @@ export default {
 </script>
 <style scoped>
 .activeBtn {
-  background-color: #4169e3 !important;
+  background-color: #4B91F1 !important;
 }
 
 .carousel-indicators {

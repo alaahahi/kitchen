@@ -1,14 +1,14 @@
 @import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
 @font-face {
-  font-family: 'Dubai';
+  font-family: 'Cairo', sans-serif;
   font-display: swap;
   src: //url('../font/DubaiW-Regular.woff2') format('woff2'), /* Super Modern Browsers */
     url('../fonts/DubaiW-Regular.woff') format('woff'); /* Pretty Modern Browsers */
   //url('../font/DubaiW-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 body {
-  direction: rtl;
-  font-family: 'Dubai', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Cairo', sans-serif;
   background-color: #fff;
   -webkit-transition: font 0.3s ease;
   -o-transition: font 0.3s ease;
@@ -17,8 +17,8 @@ body {
 a {
   text-decoration: none;
 }
-.logo-manhom {
-  max-width: 90px;
+.logo-katchen {
+  max-width: 120px;
 }
 .logo-footer {
   max-width: 130px;
@@ -322,7 +322,7 @@ a:-webkit-any-link {
 .start-0-c {
   left: 12px !important;
 }
-.logo-manhom-s {
+.logo-katchen-s {
   width: 46px;
 }
 .bg-primary-30 {
@@ -595,7 +595,7 @@ ul:focus {
   display: none;
 }
 .text-primary {
-  color: #4169e3 !important;
+  color: #cf5260 !important;
 }
 .bg-serach {
   background: #f7f9fb;
@@ -717,13 +717,13 @@ a {
 }
 .signInBtn {
   height: 44px;
-  background-color: #132356;
+  background-color: #cf5260;
   color: white !important;
   border: none !important;
 }
 .signInBtn:hover {
   color: white !important;
-  background-color: #132356 !important;
+  background-color: #cc6773 !important;
   // border-color: #132356 !important;
   border: none !important;
 }
@@ -757,7 +757,7 @@ a {
 }
 
 .Vue-Toastification__toast {
-  font-family: 'Dubai', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: 'Cairo', sans-serif  !important;
 }
 
 .j-margin-top-negative-descover {
@@ -771,7 +771,7 @@ a {
   }
 }
 .fix-primary {
-  background: #4169e3 !important ;
+  background: #cf5260 !important ;
 
   color: #fff !important;
 }

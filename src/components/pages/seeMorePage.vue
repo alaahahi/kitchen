@@ -67,7 +67,7 @@
                                 </button>
                                         <div class="position-absolute g-image-text">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="16" fill="#4169E3"/>
+                                        <circle cx="16" cy="16" r="16" fill="#4B91F1"/>
                                         <g clip-path="url(#clip0_3222_7294)">
                                         <path d="M25.4 22.6L22.6 19.8C23.5 18.4 24 16.8 24 15C24 10 20 6 15 6C10 6 6 10 6 15C6 20 10 24 15 24C16.8 24 18.4 23.5 19.8 22.6L22.6 25.4C23.4 26.2 24.6 26.2 25.4 25.4C26.2 24.6 26.2 23.4 25.4 22.6ZM15 22C11.1 22 8 18.9 8 15C8 11.1 11.1 8 15 8C18.9 8 22 11.1 22 15C22 18.9 18.8 22 15 22Z" fill="white"/>
                                         <path d="M19 14H16V11C16 10.4 15.6 10 15 10C14.4 10 14 10.5 14 11V14H11C10.5 14 10 14.4 10 15C10 15.6 10.4 16 11 16H14V19C14 19.6 14.4 20 15 20C15.6 20 16 19.6 16 19V16H19C19.6 16 20 15.6 20 15C20 14.4 19.5 14 19 14Z" fill="white"/>
@@ -109,7 +109,7 @@
             <div   class="col-12 d-flex justify-content-between mb-2">
                 <h2   class="fw-bold fs-5 my-3">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M1 13L5.58579 8.41421C6.36683 7.63317 7.63316 7.63316 8.41421 8.41421L13 13M11 11L12.5858 9.41421C13.3668 8.63317 14.6332 8.63316 15.4142 9.41421L17 11M11 5H11.01M3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17Z" stroke="#4169E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               <path d="M1 13L5.58579 8.41421C6.36683 7.63317 7.63316 7.63316 8.41421 8.41421L13 13M11 11L12.5858 9.41421C13.3668 8.63317 14.6332 8.63316 15.4142 9.41421L17 11M11 5H11.01M3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17Z" stroke="#4B91F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                </svg>
 
                    معرض الصور
@@ -549,7 +549,7 @@ export default {
 
         getCategorySelected() {
             this.loadingMoreSelected = true
-            this.http.get("/category/getCategoriesByCountry?code=" + this.$store.state.countryFilter.toLowerCase())
+            this.http.get("/category/getCategoriesByCountry?code=" + this.$store.state.langFilter.toLowerCase())
                 .then(async (response) => {
 
                     this.allcategorySelected = response.data

@@ -205,18 +205,18 @@ export default {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #4169e3;
+  color: #4B91F1;
   background-color: #fff;
   border-color: #fff;
-  border-bottom: 3px solid #4169e3;
+  border-bottom: 3px solid #4B91F1;
   font-weight: bold;
 }
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus {
-  color: #4169e3;
+  color: #4B91F1;
   background-color: #fff;
   border-color: #fff;
-  border-bottom: 3px solid #4169e3;
+  border-bottom: 3px solid #4B91F1;
   font-weight: bold;
 }
 </style>

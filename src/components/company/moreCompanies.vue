@@ -129,7 +129,7 @@ export default {
       this.http.post("/company/filter?skip="+this.more,{
 
           "order":this.companiesdata.filters,
-      "country":[this.$store.state.countryFilter.toLowerCase()]
+      "country":[this.$store.state.langFilter.toLowerCase()]
       },{ headers: { token:this.$store.state.token } }).then(async (response) => {
         this.companies = response.data.items;
       });

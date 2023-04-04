@@ -124,16 +124,16 @@ export default {
 <style scoped>
 
 .btn-goled-active {
-        border-color: #4169E3;
+        border-color: #4B91F1;
 }
 .btn-outline-golde{
 
     background-color:#5e5b5517;
     margin: 2px;
-    color:#4169E3 ;
+    color:#4B91F1 ;
 }
 .btn-outline-golde:hover, .btn-outline-golde:focus, .btn-outline-golde:active, .btn-outline-golde.active, .open>.dropdown-toggle.btn-outline-golde {
-    color:#4169E3 ;
+    color:#4B91F1 ;
        background-color:#d4b37017;
 }
 ul {
@@ -147,8 +147,8 @@ ul {
     color:#3737e9 ;
 }
 .btn-outline-golde-m:hover, .btn-outline-golde:focus, .btn-outline-golde:active, .btn-outline-golde.active, .open>.dropdown-toggle.btn-outline-golde {
-    color:#4169E3 ;
-     border-color: #4169E3;
+    color:#4B91F1 ;
+     border-color: #4B91F1;
 }
 .btn:focus {
   outline: none;

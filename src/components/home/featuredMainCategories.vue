@@ -101,8 +101,8 @@ export default {
     return {
       code: this.$route.meta.code
         ? this.$route.meta.code
-        : this.$store.state.countryFilter
-        ? this.$store.state.countryFilter.toLowerCase()
+        : this.$store.state.langFilter
+        ? this.$store.state.langFilter.toLowerCase()
         : 'ae',
       checkData: false,
       disabled: true,

@@ -1116,7 +1116,7 @@ export default {
             this.http.get('/company',
                 {
                     //"categories":[parseInt(this.$route.params.category_id)],
-                    //"country":[this.$store.state.countryFilter.toLowerCase()]
+                    //"country":[this.$store.state.langFilter.toLowerCase()]
                 })
                 .then(async (response) => {
                     this.eduCompany = response.data.items
@@ -1209,9 +1209,9 @@ start-0-c {
 
 .nav-link.router-link-exact-active {
   border-radius: 20px 0px 0px 20px;
-  background-color: #4169e32e;
-  border-right: 5px #4169e3 solid;
-  color: #4169e3;
+  background-color: #4B91F12e;
+  border-right: 5px #4B91F1 solid;
+  color: #4B91F1;
   font-weight: bold;
 }
 

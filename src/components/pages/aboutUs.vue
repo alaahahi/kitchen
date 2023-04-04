@@ -59,7 +59,7 @@ export default {
         methods: {
     getCharactour()
             {
-              this.http.get('/charactour/most_visited?code='+this.$store.state.countryFilter.toLowerCase())
+              this.http.get('/charactour/most_visited?code='+this.$store.state.langFilter.toLowerCase())
               .then(async (response)=>{
                 this.charactours = response.data.top_characters.slice(0,2)
         this.loading = false

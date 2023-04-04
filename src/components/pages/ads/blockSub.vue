@@ -7,7 +7,7 @@
          </div>
       </div>
       <div class="text-center mt-2">
-      <div class="badge rounded-pill bg-white px-3 fs-6 p-2"><img src="/web-asset/img/logo.png" alt="logo ManHOM" class="logo-manhom-s lazyload"></div>
+      <div class="badge rounded-pill bg-white px-3 fs-6 p-2"><img src="/web-asset/img/logo.png" alt="logo ManHOM" class="logo-katchen-s lazyload"></div>
    </div>
    </div>
    <div class="card-body text-center">

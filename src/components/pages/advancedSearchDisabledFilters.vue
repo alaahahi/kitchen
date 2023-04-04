@@ -586,8 +586,8 @@ export default {
       order: [],
       code: this.$route.meta.code
         ? this.$route.meta.code
-        : this.$store.getters.countryFilter
-        ? this.$store.getters.countryFilter.toLowerCase()
+        : this.$store.getters.langFilter
+        ? this.$store.getters.langFilter.toLowerCase()
         : 'ae',
       resultsCategory: [],
       skip: 0,
@@ -689,7 +689,7 @@ export default {
       this.allSubCategories = {}
       this.selectSubCategory = ''
       this.order = []
-      this.code = this.$store.getters.countryFilter ? this.$store.getters.countryFilter.toLowerCase() : 'ae'
+      this.code = this.$store.getters.langFilter ? this.$store.getters.langFilter.toLowerCase() : 'ae'
       this.resultsCategory = []
       this.skip = 0
       this.more = 0
@@ -1281,7 +1281,7 @@ input::placeholder {
   background: none;
 }
 .allresult {
-  color: #4169e3;
+  color: #4B91F1;
   font-size: 16px;
   font-weight: 700;
 }

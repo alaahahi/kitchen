@@ -1,6 +1,6 @@
 <template>
     <hooper :settings="hooperSettings" >
-        <slide v-for="(charactour, index) in charactours" :key=index >
+        <slide v-for="(slider, index) in sliders" :key=index >
             <div class="card shadow m-3 rounded-btn-img pt-3 ps-3 pe-3">
                 <div class="position-relative p-1 rounded-btn-img" >
                         <app-image
@@ -10,10 +10,10 @@
                         data-background-image="/web-asset/img/noResulw.jpg"  
                         src="/web-asset/img/noResul.jpg" 
                         :height="220" 
-                        :lazy-srcset="charactour.image"/>
+                        :lazy-srcset="slider.image"/>
                         
            
-                        <div class="position-absolute custom-p translate-middle" :class="charactour.vip_person ? '' : 'd-none-s'">
+                        <div class="position-absolute custom-p translate-middle" :class="slider.vip_person ? '' : 'd-none-s'">
                             <h5>
                                 <span class="badge rounded-pill p-0 bg-prim-c">
                                 <primarySvg />
@@ -22,11 +22,11 @@
                         </div>
                 </div>
                 <div class="text-center pt-3 pb-1" style="min-height: 146px;">
-                    <a  :href="'/شخصيات/'+decodeURI(charactour.slug)+'/'"
+                    <a  :href="'/شخصيات/'+decodeURI(slider.slug)+'/'"
                             class="stretched-link text-decoration-none">
-                    <h3 class="card-title fs-4 fw-bold" style="color:#212529">{{ charactour.character_name_ar }}</h3>
-                    <p class="m-0  text-muted fw-bold fs-16" v-if="fixContent(charactour.content)">
-                            {{ fixContent(charactour.content) | truncate(50, '..') }}
+                    <h3 class="card-title fs-4 fw-bold" style="color:#212529">{{ slider.character_name_ar }}</h3>
+                    <p class="m-0  text-muted fw-bold fs-16" v-if="fixContent(slider.content)">
+                            {{ fixContent(slider.content) | truncate(50, '..') }}
                     </p>
                     </a>
                 </div>
@@ -45,7 +45,7 @@ import appPicture from './appPicture.vue'
 import primarySvg from './svg/primarySvg.vue'
 
 export default {
-    props: ['charactours', 'hooperSettings'],
+    props: ['sliders', 'hooperSettings'],
     components:
     {
         Hooper,
