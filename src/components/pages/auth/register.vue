@@ -14,88 +14,21 @@
         </div>
         <div class="col-md-6 bg-white" v-if="page == 1">
           <div class="row flex-row-reverse mb-4">
-            <div class="col-md-10">
-              <h4 v-if="!massage" class="text-gray-60 pt-4 text-header text-center text-md-end">
+            <div class="col-md-12">
+              <h4 v-if="!massage" class="text-gray-60 pt-4 text-header text-center">
                 تسجيل الدخول أو إنشاء حساب
               </h4>
               <h4 v-if="massage" class="text-gray-60 pt-4 text-header text-center text-md-end">{{ massage }}</h4>
             </div>
           </div>
-          <div class="row flex-row-reverse">
-            <div class="col-md-10 text-center text-md-end">
-              <button
-                class="btn btn-light input-reg border bg-white w-74"
-                @click="AuthProvider('google')"
-                style="color: #222222; line-height: 30px"
-              >
-                <svg
-                  class="float-end m-1"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="24" height="24" fill="white" />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M23.04 12.2615C23.04 11.446 22.9668 10.6619 22.8309 9.90918H12V14.3576H18.1891C17.9225 15.7951 17.1123 17.013 15.8943 17.8285V20.714H19.6109C21.7855 18.7119 23.04 15.7637 23.04 12.2615Z"
-                    fill="#4285F4"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 23.4996C15.105 23.4996 17.7081 22.4698 19.6109 20.7134L15.8943 17.828C14.8645 18.518 13.5472 18.9257 12 18.9257C9.00474 18.9257 6.46951 16.9028 5.56519 14.1846H1.72314V17.1641C3.61542 20.9225 7.50451 23.4996 12 23.4996Z"
-                    fill="#34A853"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M5.56523 14.1855C5.33523 13.4955 5.20455 12.7584 5.20455 12.0005C5.20455 11.2425 5.33523 10.5055 5.56523 9.81548V6.83594H1.72318C0.944318 8.38844 0.5 10.1448 0.5 12.0005C0.5 13.8562 0.944318 15.6125 1.72318 17.165L5.56523 14.1855Z"
-                    fill="#FBBC05"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12 5.07386C13.6884 5.07386 15.2043 5.65409 16.3961 6.79364L19.6945 3.49523C17.7029 1.63955 15.0997 0.5 12 0.5C7.50451 0.5 3.61542 3.07705 1.72314 6.83545L5.56519 9.815C6.46951 7.09682 9.00474 5.07386 12 5.07386Z"
-                    fill="#EA4335"
-                  />
-                </svg>
-                المتابعة باستخدام جوجل
-                <span :class="{ 'spinner-border spinner-border-sm': loading == 'google' }"></span>
-              </button>
-              <!--    <button class="btn btn-info w-75 my-4 text-white" disabled><i class="fa-brands fa-twitter text-white float-end m-1"></i> المتابعة بإستخدام Twitter </button> -->
-              <button
-                class="btn btn-primary input-reg mt-3 w-74"
-                @click="AuthProvider('facebook')"
-                style="color: #fff; background-color: #1877f2 !important; line-height: 30px"
-              >
-                <svg
-                  class="float-end m-1"
-                  width="23"
-                  height="23"
-                  viewBox="0 0 23 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M23 12.0694C23 5.71811 17.8513 0.569391 11.5 0.569391C5.14872 0.569391 0 5.71811 0 12.0694C0 17.8094 4.20538 22.567 9.70312 23.4297V15.3936H6.7832V12.0694H9.70312V9.5358C9.70312 6.65361 11.42 5.06158 14.0468 5.06158C15.305 5.06158 16.6211 5.28619 16.6211 5.28619V8.11627H15.171C13.7424 8.11627 13.2969 9.00273 13.2969 9.91218V12.0694H16.4863L15.9765 15.3936H13.2969V23.4297C18.7946 22.567 23 17.8094 23 12.0694Z"
-                    fill="white"
-                  />
-                </svg>
-
-                المتابعة باستخدام فيسبوك
-                <span :class="{ 'spinner-border spinner-border-sm': loading == 'facebook' }"></span>
-              </button>
-              <h1 class="fs-6 gray-light my-2 py-5 w-74 m-auto m-md-0"><span style="color: #717173">أو </span></h1>
-
-              <div class="w-74 m-auto m-md-0">
+          <div class="row ">
+            <div class="col-md-12 text-center">
+              <div class="w-74 m-auto">
                 <label for="email" class="form-label"
                   >البريد الإلكتروني <span v-if="!validEmail(email)">*</span>
                 </label>
 
-                <div class="input-group has-validation m-auto m-md-0">
+                <div class="input-group has-validation m-auto">
                   <input
                     type="email"
                     v-model="email"
@@ -108,7 +41,7 @@
               <div class="my-4">
                 <button
                   @click="go()"
-                  class="btn btn-primary w-74 input-reg m-auto m-md-0"
+                  class="btn btn-primary w-74 input-reg m-auto"
                   type="submit"
                   :disabled="submitStatus === 'PENDING'"
                 >
@@ -130,9 +63,9 @@
               >
                 <strong>يرجى الإنتظار</strong>
               </div>
-              <div class="m-auto m-md-0">
-                <p class="text-center text-md-end">
-                  عند تسجيلك في من هم أنت موافق على
+              <div class="m-auto">
+                <p class="text-center">
+                  عند تسجيلك في العالم الرائع أنت موافق على
                   <span class="text-gray-900" style="text-decoration: underline"> الشروط والأحكام</span>
                   ،
                   <span class="text-gray-900" style="text-decoration: underline"> وسياسة الخصوصية</span>
