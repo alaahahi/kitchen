@@ -9,7 +9,7 @@
           <authSlider />
               <div class="m-5 text-end">
                 <p class="text-black fs-5 pt-5 ">
-                    فريق التحرير حريص على مراجعة أي معلومة قد تكون مغلوطة أو منقوصة 
+                   تسجيل الدخول يعطيك مميزات متعددة سجل الان
                 </p></div>
         </div>
         <div class="col-md-6 bg-white">
