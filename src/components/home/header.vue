@@ -15,7 +15,7 @@
           </picture>
         </router-link>
         <ul class="navbar-nav me-md-auto me-auto ms-0 ms-md-3">
-          <li class="nav-item dropdown py-xl-3 d-block d-xl-none">
+          <li class="nav-item dropdown py-xl-3 d-block d-xl-none" v-for="lang in language" :key="lang.id">
             <a
               class="nav-link fw-bold dropdown-toggle"
               id="navbarScrollingDropdown"
@@ -23,19 +23,11 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
               style="color: #20211f !important "
+              v-if="value != lang.name"
+              @click="changelang()"
             >
-              {{ value }} <i class="fa-solid fa-angle-down me-2 ms-3 text-gray-90"></i>
+              {{ value }}
             </a>
-            <ul
-              class="dropdown-menu position-absolute text-end shadow rounded-btn border-none"
-              aria-labelledby="navbarScrollingDropdown"
-            >
-              <li v-for="lang in language" :key="lang.id">
-                <button v-if="value != lang.name" @click="changelang(lang.name, lang.code)" class="dropdown-item">
-                  {{ lang.name }}
-                </button>
-              </li>
-            </ul>
           </li>
         </ul>
         <button
@@ -117,7 +109,7 @@
               >
          
             </li>
-            <li class="nav-item dropdown ms-xl-auto pb-xl-4 pt-xl-4 d-none d-xl-block">
+            <li v-for="lang in language" :key="lang.id+1" :class="value != lang.name ? 'nav-item dropdown ms-xl-auto pb-xl-4 pt-xl-4 d-none d-xl-block':'' ">
               <a
                 class="nav-link fw-bolder fs-6 dropdown-toggle"
                 id="navbarScrollingDropdown1"
@@ -125,23 +117,11 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 style="color: #20211f !important "
+                v-if="value != lang.name"
+                @click="changelang()"
               >
-                {{ value }} <i class="fa-solid fa-angle-down me-2 ms-3 text-gray-90"></i>
+                {{ value }}
               </a>
-              <ul
-                class="dropdown-menu text-end shadow rounded-btn border-none"
-                aria-labelledby="navbarScrollingDropdown1"
-              >
-                <li v-for="lang in language" :key="lang.id">
-                  <button
-                    v-if="value != lang.name"
-                    @click="changelang(lang.name, lang.code)"
-                    class="dropdown-item"
-                  >
-                    {{ lang.name }}
-                  </button>
-                </li>
-              </ul>
             </li>
             <li v-if="!user" class="nav-item" style="padding: 1.3rem 0">
               <hr class="d-block d-xl-none" />
@@ -339,18 +319,13 @@ export default {
     },
 
     getCountries() {
-          try {
-            this.code = this.$store.state.langFilter
-            this.value = this.language.filter((item) => {
-              return item.code == this.code.toLowerCase()
-            })[0].name
-          } catch {
-            this.value = this.language.filter((item) => {
-              return item.code == 'ar'
-            })[0].name
-      
-          }
-     
+
+            this.code = this.$store.state.langFilter ? this.$store.state.langFilter : 'ar'
+            if(this.code == 'en'){
+              this.value = "عربي"
+            }else{
+              this.value = "English"
+            }    
     },
 
     logout: function () {
@@ -367,11 +342,21 @@ export default {
       this.$router.go()
     },
 
-    changelang(v, c) {
-      this.value = v
-      this.$i18n.locale = c
-      this.$cookies.set('selectedlang', c)
-      this.$store.state.langFilter = c
+    changelang() {
+      if(this.code == 'en'){
+              this.value = "عربي"
+              this.$i18n.locale = 'ar'
+              this.$cookies.set('selectedlang', 'ar')
+              this.$store.state.langFilter = 'ar'
+
+            }else{
+              this.value = "English"
+              this.$i18n.locale = 'en'
+              this.$cookies.set('selectedlang', 'en')
+              this.$store.state.langFilter = 'en'
+
+            }   
+
       this.$router.push('/').catch((err) => {
         this.$router.go()
       })
@@ -427,7 +412,7 @@ export default {
   padding: 0;
 }
 .logo-katchen {
-  max-width: 100px;
+  max-width: 65px;
 }
 .fs-c {
   font-size: 16px;
@@ -454,7 +439,7 @@ export default {
 }
 @media screen and (max-width: 480px) {
   .logo-katchen {
-    max-width: 60px;
+    max-width: 45px;
   }
   .logo-profile {
     width: 64px;

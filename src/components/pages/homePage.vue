@@ -1,15 +1,20 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <trend-search ></trend-search>
     <video-about></video-about>
-   
-
+    <ourServices></ourServices>
+    <katchen></katchen>
+    <testimonial></testimonial>
   </div>
 </template>
 <script>
 
 import trendSearch from '../home/trendSearch.vue'
 import videoAbout from '../home/videoAbout.vue'
+import ourServices from '../home/ourServices.vue'
+import katchen from '../home/katchen.vue'
+import testimonial from '../home/testimonial.vue'
+
 
 export default {
   metaInfo: {
@@ -18,7 +23,10 @@ export default {
   components: {
 
     trendSearch,
-    videoAbout
+    videoAbout,
+    ourServices,
+    katchen,
+    testimonial
 
   },
   data() {

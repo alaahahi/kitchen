@@ -2,7 +2,8 @@
     <section class="trend-search mb-5 mt-2" style="direction: ltr;">
         <div :class="!sliderImages ? 'd-none' : 'd-block'">
             <div v-if="checkRelLength(sliderImages)">
-                <hooperSliderHome id="charactoursSlider" :charactours=sliderImages :hooperSettings=hooperSettings />
+              
+                <hooperSliderHome id="charactoursSlider"  :hooperSettings=hooperSettings :sliders="sliderImages" />
             </div>
         </div>
         <div :class="!sliderImages ? 'd-block' : 'd-none'">
@@ -26,7 +27,6 @@ import 'hooper/dist/hooper.css';
 import VueSkeletonLoader from 'skeleton-loader-vue';
 import hooperSliderHome from '../pages/accessories/hooperSliderHome.vue'
 export default {
-    props:['sliderImages'],
     components:
     {
         Hooper,
@@ -39,13 +39,16 @@ export default {
         return {
             windowSize: window.innerWidth,
             loading: true,
+            sliderImages:[{"image":"/web-asset/img/slider0.jpg"},{"image":"/web-asset/img/slider1.jpg"},{"image":"/web-asset/img/slider2.jpg"}],
             hooperSettings: {
                 "itemsToSlide": 1,
                 "touchDrag": true,
                 "mouseDrag": false,
                 "centerMode": true,
                 "wheelControl": false, 
-                "infiniteScroll": true, 
+                "infiniteScroll": true,
+                "autoPlay":true,
+                "playSpeed":"2000",
                 "rtl": true, 
                 "itemsToShow": 1.5, 
                 "breakpoints": { 

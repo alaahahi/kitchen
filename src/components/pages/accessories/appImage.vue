@@ -176,7 +176,7 @@ export default {
   width: auto;
   vertical-align: middle;
   min-height: 220px;
-  height: 220px;
+  height: 600px;
   object-fit: cover;
 }
 </style>

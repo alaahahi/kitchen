@@ -17,13 +17,21 @@ import en from './i18n/en.js';
 import ar from './i18n/ar.js';
 Vue.use(VueI18n)
 const i18n = new VueI18n({
-  locale:  Vue.$cookies.get("selectedlang")  ? Vue.$cookies.get("selectedlang") : 'en', // set the default locale to English
+  locale:  Vue.$cookies.get("selectedlang")  ? Vue.$cookies.get("selectedlang") : 'ar', // set the default locale to ar
   messages: {
     en, // register the English language module
     ar // register the Arabic language module
   }
 });
 
+import 'viewerjs/dist/viewer.css'
+import VueViewer from 'v-viewer'
+Vue.use(VueViewer,{
+  defaultOptions: {
+    'toolbar': false,
+     "navbar": false
+  }
+})
 
 
 import VueResizeText from 'vue-resize-text';

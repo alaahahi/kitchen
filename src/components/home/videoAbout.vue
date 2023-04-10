@@ -1,12 +1,13 @@
  <template>
 <section class=" container-fluid ">
-            <div class="m-auto w-size" :class="!categorys ? 'd-none': 'd-block'">
+            <div class="m-auto w-size" :class="categorys ? 'd-none': 'd-block'">
                 <p class="text-gray-80  py-2  fs-3 fw-bold pt-2 text-center">{{ $t('aboutUs')}} </p>
-                <div class="nav justify-content-center  p-0">
-          
+                <div class="nav justify-content-center  p-0 position-relative">
+                  <iframe class="rounded-btn-img" width="800" height="450" src="https://www.youtube-nocookie.com/embed/R1HJ94wAuG8?start=212&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <div class="position-absolute w-100" style="height: 450px;"></div>
                 </div>
             </div>
-            <div class="m-auto w-size" :class="!categorys ? 'd-block': 'd-none'">
+            <div class="m-auto w-size" :class="categorys ? 'd-block': 'd-none'">
                
 
                 <p class="text-gray-80  py-2  fs-3 fw-bold pt-2 text-center">{{ $t('aboutUs')}} </p>

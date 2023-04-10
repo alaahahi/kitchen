@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return null;
   }
 
-  const selectedlang = getCookie('selectedlang');
+  const selectedlang = getCookie('selectedlang') ? getCookie('selectedlang') :'ar';
   const htmlElement = document.querySelector('html');
   const bootstrapCSS = document.querySelector('#bootstrap-css');
   const bodyElement = document.querySelector('body');
