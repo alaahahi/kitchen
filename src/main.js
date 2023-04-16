@@ -27,10 +27,7 @@ const i18n = new VueI18n({
 import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
 Vue.use(VueViewer,{
-  defaultOptions: {
-    'toolbar': false,
-     "navbar": false
-  }
+
 })
 
 
@@ -81,7 +78,7 @@ const cache = setupCache({
  
   
    Vue.prototype.http = axios.create({
-      baseURL: import.meta.env.VITE_DELIVERY_URL,
+      baseURL: import.meta.env.VITE_WEBSITE_URL,
       adapter: cache.adapter
   });
   

@@ -3,7 +3,7 @@
     <trend-search ></trend-search>
     <video-about></video-about>
     <ourServices></ourServices>
-    <katchen></katchen>
+    <kitchen></kitchen>
     <testimonial></testimonial>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import trendSearch from '../home/trendSearch.vue'
 import videoAbout from '../home/videoAbout.vue'
 import ourServices from '../home/ourServices.vue'
-import katchen from '../home/katchen.vue'
+import kitchen from '../home/kitchen.vue'
 import testimonial from '../home/testimonial.vue'
 
 
@@ -25,7 +25,7 @@ export default {
     trendSearch,
     videoAbout,
     ourServices,
-    katchen,
+    kitchen,
     testimonial
 
   },

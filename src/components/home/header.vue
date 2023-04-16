@@ -10,7 +10,7 @@
               alt="describe image content"
               loading="lazy"
               decoding="async"
-              class="logo-katchen"
+              class="logo-kitchen"
             />
           </picture>
         </router-link>
@@ -58,7 +58,7 @@
                     <div class="float-end">
                       <img
                         v-if="!user.avatar"
-                        class="logo-katchen pt-2"
+                        class="logo-kitchen pt-2"
                         src="/web-asset/img/person-circle.png"
                         alt="person-circle"
                       />
@@ -146,7 +146,7 @@
               >
                 <img
                   v-if="!user.avatar"
-                  class="logo-katchen pt-2"
+                  class="logo-kitchen pt-2"
                   src="/web-asset/img/person-circle.png"
                   alt="person-circle"
                 />
@@ -411,7 +411,7 @@ export default {
   line-height: 40px;
   padding: 0;
 }
-.logo-katchen {
+.logo-kitchen {
   max-width: 65px;
 }
 .fs-c {
@@ -438,7 +438,7 @@ export default {
   display: block;
 }
 @media screen and (max-width: 480px) {
-  .logo-katchen {
+  .logo-kitchen {
     max-width: 45px;
   }
   .logo-profile {

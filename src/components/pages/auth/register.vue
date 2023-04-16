@@ -16,7 +16,7 @@
           <div class="row flex-row-reverse mb-4">
             <div class="col-md-12">
               <h4 v-if="!massage" class="text-gray-60 pt-4 text-header text-center">
-                تسجيل الدخول أو إنشاء حساب
+                {{ $t('loginOrRegister')}} 
               </h4>
               <h4 v-if="massage" class="text-gray-60 pt-4 text-header text-center text-md-end">{{ massage }}</h4>
             </div>
@@ -25,7 +25,7 @@
             <div class="col-md-12 text-center">
               <div class="w-74 m-auto">
                 <label for="email" class="form-label"
-                  >البريد الإلكتروني <span v-if="!validEmail(email)">*</span>
+                  > {{ $t('email')}}  <span v-if="!validEmail(email)">*</span>
                 </label>
 
                 <div class="input-group has-validation m-auto">
@@ -36,7 +36,7 @@
                     :class="!validEmail(email) ? '' : 'is-valid'"
                   />
                 </div>
-                <div class="text-danger pt-3 fs-7" v-if="!validEmail(email) && email">يرجى التأكد من الإيميل</div>
+                <div class="text-danger pt-3 fs-7" v-if="!validEmail(email) && email">{{ $t('validEmailAlert')}} </div>
               </div>
               <div class="my-4">
                 <button
@@ -45,7 +45,7 @@
                   type="submit"
                   :disabled="submitStatus === 'PENDING'"
                 >
-                  التالي
+                {{ $t('next')}} 
                   <span :class="{ 'spinner-border spinner-border-sm': loadings }"></span>
                 </button>
               </div>
@@ -54,7 +54,7 @@
                 role="alert"
                 v-if="submitStatus === 'ERROR'"
               >
-                <strong>يرجى ملء حقل البريد الإلكتروني </strong>
+                <strong>{{ $t('validEmailAlert')}} </strong>
               </div>
               <div
                 class="alert alert-info alert-dismissible fade show w-74 text-center mt-2"

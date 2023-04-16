@@ -73,7 +73,7 @@
           <title>{{ $t('priceKitchenTitle')}}</title>
           <rect width="100%" height="100%" fill="#efa61b"></rect>
         </svg>
-            <i class="fa-sharp fa-solid fa-wand-magic-sparkles position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
+            <i class="fa-solid fa-money-check-dollar position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
         </div>
         <h2 class="fw-normal my-4">{{ $t('priceKitchenTitle')}}</h2>
         <p>
@@ -98,7 +98,7 @@
           <title>{{ $t('installmentitKchensTitle')}}</title>
           <rect width="100%" height="100%" fill="#efa61b"></rect>
         </svg>
-            <i class="fa-sharp fa-solid fa-wand-magic-sparkles position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
+            <i class="fa-solid fa-igloo position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
         </div>
         <h2 class="fw-normal my-4">{{ $t('installmentitKchensTitle')}}</h2>
         <p>
@@ -123,7 +123,7 @@
           <title>{{ $t('BookConsultationTitle')}}</title>
           <rect width="100%" height="100%" fill="#efa61b"></rect>
         </svg>
-            <i class="fa-sharp fa-solid fa-wand-magic-sparkles position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
+            <i class="fa-solid fa-utensils position-absolute top-50 start-50 translate-middle text-white" style="font-size: 3rem; z-index: 1;"></i>
         </div>
         <h2 class="fw-normal my-4">{{ $t('BookConsultationTitle')}}</h2>
         <p>

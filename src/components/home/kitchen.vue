@@ -6,19 +6,17 @@
       <div class="nav justify-content-center p-0"></div>
     </div>
     <div class="row mx-1 m-auto d-flex justify-content-around py-5">
-      <div class="col-lg-4 col-md-6 col-sm-12" v-for="src in images" :key="src">
+      <div class="col-lg-4 col-md-6 col-sm-12"   v-for="(kitchen, index) in kitchens"  :key=index  :class="index >= 6 ? 'd-none' : ''" >
         <div class="course_card">
           <div class="course_card_img">
             <viewer >
-                <img  :src="src" />
+              <img v-for="(image, indexs) in kitchen.image" :key="indexs" :src="image.path" :alt='indexs' :class="indexs >= 1 ? 'd-none' : ''" >
             </viewer>
           </div>
           <div class="course_card_content">
-            <h3 class="title">Angular Typescript</h3>
+            <h3 class="title">{{kitchen.title}}</h3>
             <p class="description">
-              When we are no longer able to change a situation - we are challenged to change ourselves. Spread love
-              everywhere you go. Let no one ever come to you without leaving happier. Problems are not stop signs, they
-              are guidelines.
+             {{kitchen.description}}
             </p>
           </div>
           <div class="course_card_footer">
@@ -37,18 +35,18 @@
 export default {
   data() {
     return {
-      images: ['https://picsum.photos/200/200', 'https://picsum.photos/300/200', 'https://picsum.photos/250/200'],
-    }
-  },
-  methods: {
-    show() {
-      this.$viewerApi({
-        options: {
-          toolbar: false,
-        },
-        images: this.images,
+      kitchens:[],
+      lang:this.$store.state.langFilter
+    }},
+methods:{
+  getTestimonial() {
+         this.http.get('/kitchen', { headers: { 'Accept-Language': this.lang } }).then(async (response) => {
+        this.kitchens = response.data.data
       })
-    },
+    }
+},
+created() {
+    this.getTestimonial()
   },
 }
 </script>

@@ -3,10 +3,10 @@
                         <div class="row text-center" style="z-index:75;padding: 0  0.8rem;">
                             <div class="dyn-height  rounded-btn mt-2 py-3">
                                 <div class="m-auto pb-2">
-                                    <img class="logo-katchen px-2  rounded-btn-img" src="/web-asset/img/noResult.jpg"
+                                    <img class="logo-kitchen px-2  rounded-btn-img" src="/web-asset/img/noResult.jpg"
                                         alt="no Result" />
                                     <img class="px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
-                                    <img class="logo-katchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg"
+                                    <img class="logo-kitchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg"
                                         alt="no Result" />
                                 </div>
                                 <h2 class="fw-bold">نأسف لعدم العثور على طلبك</h2>

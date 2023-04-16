@@ -202,9 +202,9 @@
                   style="background-color: #fff; box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 10%)"
                 >
                   <div class="m-auto pb-2">
-                    <img class="logo-katchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
+                    <img class="logo-kitchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
                     <img class="px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
-                    <img class="logo-katchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
+                    <img class="logo-kitchen px-2 rounded-btn-img" src="/web-asset/img/noResult.jpg" alt="no Result" />
                   </div>
                   <h2 class="fw-bold">نأسف لعدم العثور على طلبك</h2>
                   <h5 class="text-black-80 py-2">

@@ -13,7 +13,7 @@ const store = new Vuex.Store({
         lastCompanyPage: null,
         count: 0,
         user: Vue.$cookies.get("userWeb") ?  Vue.$cookies.get("userWeb")  : "",
-        langFilter: Vue.$cookies.get("selectedlang") ? Vue.$cookies.get("selectedlang") : '', // localStorage.getItem("userWeb") ? (JSON.parse(localStorage.getItem("userWeb"))).nationality :
+        langFilter: Vue.$cookies.get("selectedlang") ? Vue.$cookies.get("selectedlang") : 'ar', // localStorage.getItem("userWeb") ? (JSON.parse(localStorage.getItem("userWeb"))).nationality :
         isLoggedIn: Vue.$cookies.get("isLoggedIn") ?  Vue.$cookies.get("isLoggedIn") : false,
         token: Vue.$cookies.get("token") ? Vue.$cookies.get("token") : "",
         hooperSettings: {

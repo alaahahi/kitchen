@@ -9,7 +9,12 @@ export default {
     installmentitKchensTitle:'مطابخ بالتقسيط',
     BookConsultationTitle:'حجز استشارة',
     kitchen:'المطابخ',
-    opinion:'أراء العملاء'
+    opinion:'أراء العملاء',
+    loginOrRegister:'تسجيل الدخول أو إنشاء حساب',
+    email:'البريد الإلكتروني',
+    validEmailAlert:'يرجى التأكد من الإيميل',
+    next:'التالي',
+    wait:'يرجى الإنتظار'
   
   };
 

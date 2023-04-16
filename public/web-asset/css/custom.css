@@ -14,7 +14,7 @@
     text-decoration: none;
   }
   
-  .logo-katchen {
+  .logo-kitchen {
     max-width: 90px;
   }
   
@@ -290,7 +290,7 @@
     left: 12px !important;
   }
   
-  .logo-katchen-s {
+  .logo-kitchen-s {
     width: 46px;
   }
   
@@ -581,7 +581,7 @@
     line-height:40px;
     padding: 0;
 }
-.logo-katchen {
+.logo-kitchen {
     max-width: 82px;
 }
 .fs-c {
@@ -608,7 +608,7 @@
     display: block;
 }
 @media screen and (max-width: 480px) {
-.logo-katchen {
+.logo-kitchen {
     max-width: 60px;
 }
 .logo-profile{

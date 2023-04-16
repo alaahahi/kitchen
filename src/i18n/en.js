@@ -9,5 +9,13 @@ export default {
     installmentitKchensTitle:'Installment Kitchens',
     BookConsultationTitle:'Book Consultation',
     kitchen:'Kitchen',
-    opinion:'Opinion'
+    opinion:'Opinion',
+    loginOrRegister:'Login or create an account',
+    email:'E-Mail',
+    phone:'Phone',
+    validPhoneAlert:'Please check your phone',
+    validEmailAlert:'Please check your email',
+    next:'Next',
+    wait:'Please wait'
+
   };

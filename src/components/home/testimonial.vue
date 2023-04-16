@@ -9,24 +9,11 @@
         <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="5000" data-bs-duration="2000">
         
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
+                <div class="carousel-item "  v-for="(testi,index) in testimonial" :class="index == 1 ? 'active' : ''"  :key=index >
                     <div class="testimonial4_slide">
                         <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-fluid" />
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        <h4>Client 1</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-fluid" /><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        <h4>Client 2</h4>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial4_slide">
-                        <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-fluid" />
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        <h4>Client 3</h4>
+                        <p>{{testi.note}}</p>
+                        <h4>{{testi.order.user.first_name+' '+testi.order.user.last_name}}</h4>
                     </div>
                 </div>
             </div>
@@ -44,7 +31,21 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      testimonial:[],
+      lang:this.$store.state.langFilter
+    }},
+methods:{
+  getTestimonial() {
+         this.http.get('/opinion', { headers: { 'Accept-Language': this.lang } }).then(async (response) => {
+        this.testimonial = response.data.data
+      })
+    }
+},
+created() {
+    this.getTestimonial()
+  },
 }
 </script>
 

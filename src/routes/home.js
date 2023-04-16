@@ -20,7 +20,6 @@ const allCharacterPage = () =>import ( '../components/pages/allCharacterPage.vue
 const allCompanyPage = () =>import ( '../components/pages/allCompanyPage.vue')
 const requestToVerifyCompany = () =>import ('../components/company/requestToVerifyCompany.vue')
 const requestToVerifyCharactour = () =>import ('../components/character/requestToVerifyCharactour.vue')
-const discoverPage = () =>import ( '../components/pages/discoverPage.vue')
 const categoriesPage = () =>import ( '../components/pages/categoriesPage.vue')
 const advancedSearchPage = () =>import ( '../components/pages/advancedSearchPage.vue')
 const subscriptions = () =>import ( '../components/pages/subscriptions.vue')
@@ -163,14 +162,6 @@ export default [
                 meta: {
                     guest: false,
                     //requiresAuth: true   //requiresAuth: true encodeURI('الرئيسية'),
-                }
-            },
-            {
-                path: '/discover',
-                component: discoverPage,
-                name: 'discover',
-                meta: {
-                    guest: false,
                 }
             },
             {
